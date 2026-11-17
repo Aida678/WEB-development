@@ -1,0 +1,46 @@
+body {
+    font-family: 'Lora', Arial, sans-serif;
+    background-color: #d6c198
+}
+
+header {
+    background-color: #73461f;
+}
+
+section {
+    background-color: #ffffff;
+    border: 2px solid #292016;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    color: #39281a;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+    color: #513112;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: justify;
+    color: #000000;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:visited { color: #7a11bf}
+a:hover { color: #39aeb1}
