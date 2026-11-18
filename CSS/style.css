@@ -1,10 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Lora', Arial, sans-serif;
-    background-color: #d6c198
+    background-color: #d6c198;
+    max-width: 1200px;
+    margin: 0 auto; /* выравнивание по горизонтали */
+    padding-top: 80px;
 }
 
 header {
     background-color: #73461f;
+    height: 150px;
+    position: relative;
+}
+
+.note-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
 }
 
 section {
@@ -12,6 +28,26 @@ section {
     border: 2px solid #292016;
     border-radius: 10px;
     padding: 20px;
+    margin-top: 20px; /* пространство между блоками текста */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff8dcff;
+    z-index: 100;
+    padding: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 h1 {
@@ -20,6 +56,8 @@ h1 {
     line-height: 1.2;
     text-align: center;
     color: #39281a;
+    margin: 0;
+    padding-top: 40px; /* Чтоб заголовок не прилепал к шапке */
 }
 
 h2 {
