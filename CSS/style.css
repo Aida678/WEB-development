@@ -82,3 +82,26 @@ a {
 }
 a:visited { color: #7a11bf}
 a:hover { color: #39aeb1}
+
+.music-figure {
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.music-webp {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit:cover; /* Картинка заполняет блок не искажая пропорции*/
+    border-radius: 10px;
+    border: 2px solid #292016;
+}
+
+figcaption {
+    font-size: 14px;
+    font-style: italic;
+    color: #513112;
+    margin-top: 10px;
+}
+
