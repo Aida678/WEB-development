@@ -37,13 +37,75 @@
         <section id="my_wave">
             <h2>Моя волна</h2>
             <p>В разделе "Моя волна" вы можете найти композиции, похожие на те, что вы обычно слушаете</p>
+            <p>Находите любимых исполнителей и композиции</p>
         </section>
 
         <section id="favorite">
             <h2>Избранное</h2>
             <p>В этом разделе сохраняются композици, которые вам понравились</p>
         </section>
+
+                <!-- Новая секция для Лабы 2 (Grid + Flexbox) -->
+        <section id="catalog">
+            <h2>Популярные треки</h2>
+
+            <!-- Это родительский элемент (Грид-контейнер) -->
+            <div class="tracks-grid">
+
+                <!-- Это дочерние элементы (Грид-элементы) -->
+                <article class="track-card">
+                    <div class="card-content"> <!-- Это Флекс-контейнер -->
+                        <span class="card-icon">🎸</span> <!-- Флекс-элемент -->
+                        <div class="card-text"> <!-- Флекс-элемент -->
+                            <h3>Рок-баллады</h3>
+                            <p>Лучшие гитарные соло</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="track-card">
+                    <div class="card-content">
+                        <span class="card-icon">🎹</span>
+                        <div class="card-text">
+                            <h3>Классика</h3>
+                            <p>Вечная музыка</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="track-card">
+                    <div class="card-content">
+                        <span class="card-icon">🎧</span>
+                        <div class="card-text">
+                            <h3>Электроника</h3>
+                            <p>Для вечеринок и клубов</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="track-card">
+                    <div class="card-content">
+                        <span class="card-icon">🎷</span>
+                        <div class="card-text">
+                            <h3>Джаз</h3>
+                            <p>Уютные вечера</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <p>Контакты:</p>
+        <ul>
+            <li><a href="mailto: pochtaMusic2424@gmail.com">e-mail</a></li>
+            <li><a href="tel: +7 999 999 11 22">Телефон для связи: +7 999 999 11 22</a></li>
+            <li><a href="form.html">Зарегистрироваться</a></li>
+        </ul>
+    </footer>
 
 </body>
 </html>

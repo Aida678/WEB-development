@@ -105,3 +105,190 @@ figcaption {
     margin-top: 10px;
 }
 
+footer {
+    background-color: #73461f;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #f4ebd9
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+fieldset {
+    border: 2px solid #73461f;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f4ebd9;
+}
+
+legend {
+    font-weight: 800;
+    font-size: 20px;
+    color: #39281a;
+    padding: 0 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #bd9468;
+    border-radius: 5px;
+    font-family: 'Lora', Arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #39aeb1;
+    box-shadow: 0 0 5px rgba(57, 174, 177, 0.5);
+}
+
+::placeholder {
+    color: #a09080;
+    font-style: italic;
+}
+
+
+button[type="submit"] {
+    background-color: #73461f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Lora', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #513112;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+input:required {
+    border-left: 4px solid #cc0000;
+}
+
+input[type="radio"]:checked + label {
+    text-decoration: line-through;
+    color: #cc0000;
+    font-weight: 800;
+}
+
+nav li:nth-child(odd) a {
+    color: #73461f;
+}
+
+nav li:nth-child(even) a {
+    color: #0066cc;
+}
+
+::selection {
+    background-color: #39aeb1;
+    color: #ffffff;
+}
+
+/* 1. Свойства для РОДИТЕЛЬСКОГО элемента (ГРИД-КОНТЕЙНЕР) */
+.tracks-grid {
+    display: grid; /* Включаем двумерную сетку */
+
+    /* Создаем колонки. repeat(3, 1fr) означает: 3 колонки одинаковой ширины. */
+    /* 1fr означает "одна доля свободного пространства". */
+    /* Мы используем auto-fit и minmax, чтобы сетка была адаптивной: */
+    /* если экран узкий — карточки перенесутся на новую строку. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px; /* Задаем отступы между ячейками сетки (и по вертикали, и по горизонтали) */
+    margin-top: 20px;
+}
+
+/* 2. Свойства для ДОЧЕРНЕГО элемента (ГРИД-ЭЛЕМЕНТ) */
+.track-card {
+    background-color: #f4ebd9; /* Фон карточки */
+    border: 2px solid #bd9468; /* Рамка */
+    border-radius: 10px;       /* Скругление */
+    padding: 15px;             /* Внутренние отступы */
+
+    /* Это свойство говорит элементу занять 1 колонку в сетке */
+    /* (в нашем случае это происходит автоматически, но для задания покажем) */
+    grid-column: span 1;
+}
+
+/* 3. Свойства для РОДИТЕЛЬСКОГО элемента (ФЛЕКС-КОНТЕЙНЕР) */
+/* Это блок внутри карточки, который выравнивает иконку и текст */
+.card-content {
+    display: flex; /* Включаем одномерную флекс-сетку */
+    align-items: center; /* Выравниваем элементы по вертикали (по центру поперечной оси) */
+    gap: 15px; /* Расстояние между иконкой и текстом */
+}
+
+/* 4. Свойства для ДОЧЕРНЕГО элемента (ФЛЕКС-ЭЛЕМЕНТ) */
+.card-icon {
+    font-size: 40px; /* Размер иконки */
+    flex-shrink: 0;  /* Запрещаем иконке сжиматься, если текст станет длинным */
+}
+
+/* 5. Свойства для ДОЧЕРНЕГО элемента (ФЛЕКС-ЭЛЕМЕНТ) */
+.card-text {
+    flex-grow: 1; /* Заставляем текстовый блок занимать всё оставшееся свободное место */
+}
+
+/* Чуть подправим стили для текста внутри карточек, чтобы было красиво */
+.card-text h3 {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+    color: #513112;
+}
+
+.card-text p {
+    font-size: 14px;
+    margin: 0;
+    color: #39281a;
+    text-align: left;
+}
